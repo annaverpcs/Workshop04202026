@@ -1,2 +1,1 @@
-@zhanna
-  Feature: Zhanna automated tests
+# ZhannaE automated tests
