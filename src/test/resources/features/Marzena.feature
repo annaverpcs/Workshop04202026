@@ -23,3 +23,8 @@ Feature: Medical Center Test Scenarios
     Given I open url "https://medicenter-qa2.vercel.app/admin"
     Then I wait for 3 sec
     Then element with xpath "//body" should be present
+
+  Scenario: Verify login page opens
+    Given I open url "https://medicenter-qa2.vercel.app/admin"
+    Then I wait for 3 sec
+    Then I should see page title contains "Medicenter"
