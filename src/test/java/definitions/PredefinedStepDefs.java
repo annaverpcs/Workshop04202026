@@ -95,13 +95,7 @@ public class PredefinedStepDefs {
 
     @When("I type {string} into element with xpath {string}")
     public void iTypeIntoElementWithXpath(String value, String xpath) {
-
-        if (value.equalsIgnoreCase("today")) {
-            value = LocalDate.now()
-                    .format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-        }
-
-        getDriver().findElement(By.xpath(xpath)).sendKeys(value);
+           getDriver().findElement(By.xpath(xpath)).sendKeys(value);
     }
 
     @Then("I click on element with xpath {string}")
