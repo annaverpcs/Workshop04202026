@@ -16,6 +16,9 @@ import java.util.Iterator;
 import static org.assertj.core.api.Assertions.*;
 import static support.TestContext.getDriver;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class PredefinedStepDefs {
     @Given("I open url {string}")
     public void iOpenUrl(String url) {
@@ -91,8 +94,8 @@ public class PredefinedStepDefs {
     }
 
     @When("I type {string} into element with xpath {string}")
-    public void iTypeIntoElementWithXpath(String text, String xpath) {
-        getDriver().findElement(By.xpath(xpath)).sendKeys(text);
+    public void iTypeIntoElementWithXpath(String value, String xpath) {
+           getDriver().findElement(By.xpath(xpath)).sendKeys(value);
     }
 
     @Then("I click on element with xpath {string}")
