@@ -1,6 +1,6 @@
 # author: Anna V
 # Medical Center scenarios
-
+@medicenter
 Feature: MediCenter Test Scenarios
 
    Background:
