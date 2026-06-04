@@ -1,6 +1,7 @@
 #author: Anna
 #Selenium WebDriver practice
   Feature: Selenium WebDriver practice
+	@medicenter
 	Scenario: Login
 	  Given AnnaV launch "Medicenter V2 URL"
 	  #Given AnnaV launch "Whatever"
