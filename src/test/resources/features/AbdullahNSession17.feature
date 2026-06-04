@@ -1,6 +1,7 @@
 #author: Abdullah
 #Selenium Webdriver practice
   Feature: Selenium Webdriver practice
+    @Medicenter
     Scenario: Login
       Given AbdullahN launch "Medicenter V2 URL"
       Then AbdullahN page title is "Medicenter"

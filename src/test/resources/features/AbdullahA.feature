@@ -1,6 +1,6 @@
 # author: abdullah N
 # Medical Center Scenarios
-  
+@Medicenter
 Feature:  MediCenter Test Scenarios
 
   Background:
