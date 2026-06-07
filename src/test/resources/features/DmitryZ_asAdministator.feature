@@ -96,3 +96,5 @@ Scenario: #delete the Specialist
   When I wait for element with xpath "//td[contains(text(),'Robin Good')]" to be present
   Then I click on element with xpath "//td[contains(text(),'Robin Good')]/ancestor::tr[1]//span[contains(text(),'delete')]"
   And I click on element with xpath "//button[contains(text(),'Remove specialist')]"
+    #verify that the Specialist was removed
+  And I wait for element with xpath "//td[contains(text(),'Robin Good')]" to not be present
