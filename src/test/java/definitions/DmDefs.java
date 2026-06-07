@@ -134,4 +134,30 @@ public class DmDefs {
 
         assertThat(actualType).isEqualTo(expectedType);
     }
+
+    @Then("{string} textfield value should be {string}")
+    public void textfieldValueShouldBe(String fieldName, String expectedValue) {
+        WebElement field;
+
+        switch (fieldName) {
+            case "First Name":
+                field = getDriver().findElement(By.xpath("//input[@id='first_name']"));
+                break;
+
+            case "Last Name":
+                field = getDriver().findElement(By.xpath("//input[@id='last_name']"));
+                break;
+
+            case "Email":
+                field = getDriver().findElement(By.xpath("//input[@id='email']"));
+                break;
+
+            default:
+                throw new IllegalArgumentException("Unknown textfield: " + fieldName);
+        }
+
+        String actualValue = field.getAttribute("value");
+
+        assertThat(actualValue).isEqualTo(expectedValue);
+    }
 }
