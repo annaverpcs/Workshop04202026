@@ -67,11 +67,10 @@ Scenario: #verify
       #edit Specialist's popUp
   When I click on element with xpath "//td[contains(text(),'Robin Good')]/ancestor::tr[1]//span[contains(text(),'edit')]"
   And I wait for 1 sec
-  # ==============================
-  # Then element with xpath "//input[@id='first_name' and contains(@value, 'Robin')]" should be present
-  # Then element with xpath "//input[@id='first_name']" should contain text "Robin"
-  # And element with xpath "//input[@id='last_name' and @value='Good']" should be present
-  # ==============================
+
+  Then "First Name" textfield value should be "Robin"
+  Then "last Name" textfield value should be "Good"
+
   And element with xpath "//button[@id='monday' and @aria-checked='true']" should be present
   And element with xpath "//input[@id='working_hours.monday.from' and @value='08:00']" should be present
   And element with xpath "//input[@id='working_hours.monday.to' and @value='16:00']" should be present
