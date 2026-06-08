@@ -1,7 +1,7 @@
 # author: Dmitry Z
 # Medical center
   # create new specialist as Administrator
-
+@MediCenter
 Feature: Medicenter test as Administrator
 
 Background: #login as administrator
