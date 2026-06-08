@@ -1,9 +1,9 @@
 # author: Dmitry Z
   # Medical center
   #As Patient. Create new appointment, verify, and delete
-  
-  Feature: MediCenter Test Scenarios as Patient
 
+  @MediCenter
+  Feature: MediCenter Test Scenarios as Patient
     Background: #login as patient
       Given I open url "https://medicenter-qa2.vercel.app/"
       When I wait for element with xpath "//h1[contains(text(),'Medical Center')]" to be present
