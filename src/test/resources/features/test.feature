@@ -4,4 +4,3 @@
   Feature: Selenium webdriverr practics
     Scenario: Login
 
-      Given Dm launch ""
