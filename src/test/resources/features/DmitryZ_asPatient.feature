@@ -5,7 +5,8 @@
 @medicenter
 Feature: MediCenter Test Scenarios as Patient
 
-  Background: #login as patient
+  Background:
+	#login as patient
 	Given I open url "https://medicenter-qa2.vercel.app/"
 	When I wait for element with xpath "//h1[contains(text(),'Medical Center')]" to be present
 	Then I click on element with xpath "//button[contains(text(),'Login')]"
@@ -18,7 +19,8 @@ Feature: MediCenter Test Scenarios as Patient
 	Then I wait for element with xpath "//h1[contains(text(), 'Healthy Patient')]" to be present
 	And I wait for 1 sec
 
-  Scenario: #Create new appointment
+  Scenario:Create new appointment
+	#Create new appointment
       #When I click on element with xpath "//button[@type='button']"
 	When I click on element with xpath "//button[contains(text(),'Make an appointment')]"
 	And I wait for element with xpath "//span[contains(text(), 'Make an appointment')]" to be present
@@ -31,7 +33,8 @@ Feature: MediCenter Test Scenarios as Patient
 	Then I click on element with xpath "//button[@type='submit']"
 	And I wait for 4 sec
 
-  Scenario: #verify note, Name of Doctor, Date, time
+  Scenario:verify note, Name of Doctor, Date, time
+	#verify note, Name of Doctor, Date, time
         #note is correct
 	Then I wait for element with xpath "//p[contains(text(), 'New post')]" to be present
         #icon for close
@@ -46,7 +49,8 @@ Feature: MediCenter Test Scenarios as Patient
 	And I click on element with xpath "//button[@type = 'button']"
 
 
-  Scenario: #Delete the appointment
+  Scenario:Delete the appointment
+	#Delete the appointment
 	When I wait for element with xpath "//p[contains(text(), 'New post')]/ancestor::article[1]//span[contains(text(), 'update')]" to be present
 	And I click on element with xpath "//p[contains(text(), 'New post')]/ancestor::article[1]//span[contains(text(), 'update')]"
 	And I click on element with xpath "//button[contains(text(), 'Cancel appointment')]"

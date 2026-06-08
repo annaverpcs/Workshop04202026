@@ -4,7 +4,8 @@
 Feature: positive and negative test for Login, check requirements for email and password fields
 
   @Regression
-  Scenario: #Login form fields should have correct requirements
+  Scenario:Login form fields should have correct requirements
+	#Login form fields should have correct requirements
 	Given Please open "MedCenter URL V2"
 	Then page title is "Medicenter"
 	And wait for "//h1[contains(text(),'Medical Center')]" text
@@ -15,7 +16,8 @@ Feature: positive and negative test for Login, check requirements for email and 
 	Then "Password" textfield should have type "password"
 
   @Smoke
-  Scenario Outline: #positive test for login
+  Scenario Outline:positive test for login
+	#positive test for login
 	Given Please open "MedCenter URL V2"
 	Then page title is "Medicenter"
 	And wait for "//h1[contains(text(),'Medical Center')]" text
@@ -35,7 +37,8 @@ Feature: positive and negative test for Login, check requirements for email and 
 	  | "administrator1@gmail.com" | "abc123"  | "Mary Poppins"   |
 
 
-  Scenario Outline: #negativ test for Login
+  Scenario Outline:negativ test for Login
+	#negativ test for Login
 	Given Please open "MedCenter URL V2"
 	Then page title is "Medicenter"
 	And wait for "//h1[contains(text(),'Medical Center')]" text
