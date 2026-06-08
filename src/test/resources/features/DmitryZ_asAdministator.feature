@@ -1,11 +1,11 @@
 # author: Dmitry Z
 # Medical center
   # create new specialist as Administrator
-@medicenter @admin
+@medicenter
 Feature: Medicenter test as Administrator
 
-  @admin
-  Background: #login as administrator
+  Background:
+	#login as administrator
 	Given I open url "https://medicenter-qa2.vercel.app/"
 	When I wait for element with xpath "//h1[contains(text(),'Medical Center')]" to be present
 	Then I click on element with xpath "//button[contains(text(),'Login')]"
@@ -18,7 +18,9 @@ Feature: Medicenter test as Administrator
 	Then I wait for element with xpath "//h1[contains(text(), 'Mary Poppins')]" to be present
 	And I wait for 1 sec
 
-  Scenario: #create new specialist
+  @admin
+  Scenario: create new specialist
+	#create new specialist
 	When I wait for element with xpath "//button[contains(text(),'Add specialist')]" to be present
 	Then I click on element with xpath "//button[contains(text(),'Add specialist')]"
 	And I wait for element with xpath "//span[contains(text(), 'New specialist')]" to be present
@@ -56,7 +58,8 @@ Feature: Medicenter test as Administrator
 	And I type "16:00" into element with xpath "//input[@id='working_hours.friday.to']"
 	And I click on element with xpath "//button[contains(text(),'Save')]"
 
-  Scenario: #verify
+  Scenario: verify
+	#verify
 	When I wait for element with xpath "//td[contains(text(),'Robin Good')]" to be present
       #type of Specialist
 	Then element with xpath "//td[contains(text(),'Robin Good')]/ancestor::tr[1]//span[contains(text(),'Nurse')]" should be present
