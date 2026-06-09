@@ -1,5 +1,5 @@
 # author: OlgaB
-
+@medicenter @regressionTest
   Feature: User Story 4. Admin can edit specialist's information
 
     Background: #admin login
