@@ -69,7 +69,7 @@ public class AbdullahNStepDefs {
     @And("AbdullahN type {string} to {string} textField")
     public void abdullahnTypeToTextField(String sText, String sTextFieldName) {
         // Write code here that turns the phrase above into concrete actions
-        switch (sTextFieldName){
+        switch (sTextFieldName) {
             case "Email":
                 getDriver().findElement(By.xpath(xPathLibrary_Abdullah.sEmailTextField)).sendKeys(sText);
                 break;
@@ -81,4 +81,9 @@ public class AbdullahNStepDefs {
 
         }
     }
+
+        @Then("Abdullah wait for element with xpath {string} to be present")
+        public void iWaitForElementWithXpathToBePresent(String xpath) {
+            new WebDriverWait(getDriver(), Duration.ofSeconds(30)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
+        }
 }

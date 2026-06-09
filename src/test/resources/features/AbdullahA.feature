@@ -55,7 +55,5 @@ Feature:  MediCenter Test Scenarios
       Then I click on element with xpath "//button[contains(text(),'Save')]"
       #Verify the appointment is created
       And I wait for element with xpath "//p[contains(text(), 'AnnaV appointment1233')]/ancestor::article/div[1]/div" to be present
-    
-    
       And I wait for 5 sec
     
