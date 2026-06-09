@@ -73,4 +73,9 @@
       And I wait for element with xpath "//h1[contains(text(),'Medical Center')]" to be present
       And I wait for element with xpath "//td[text()='Alexandra Johnson-Johnson']" to be present
       And I wait for element with xpath "//td[text()='Alexandra Johnson-Johnson']/ancestor::tr/td[2]//span[text()='Nurse']" to be present
-      And I click on element with xpath "//td[text()='Alexandra Johnson-Johnson']/ancestor::tr/td[3]/div//label[text()='Edit']/ancestor::span"
+
+      #delete specialist
+      And I click on element with xpath "//td[text()='Alexandra Johnson-Johnson']/ancestor::tr/td[3]/div/span[2]"
+      Then I wait for element with xpath "//div[@role='dialog']//span[text()='Removing specialist']" to be present
+      And I click on element with xpath "//button[text()='Remove specialist']"
+      And I wait for 1 sec
