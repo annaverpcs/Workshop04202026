@@ -1,7 +1,7 @@
 # author: Dmitry Z
 # Medical center
   # create new specialist as Administrator
-@medicenter
+@medicenter @admin
 Feature: Medicenter test as Administrator
 
   Background:
@@ -95,7 +95,8 @@ Feature: Medicenter test as Administrator
 	And element with xpath "//input[@id='working_hours.friday.from' and @value='08:00']" should be present
 	And element with xpath "//input[@id='working_hours.friday.to' and @value='16:00']" should be present
 
-  Scenario: #delete the Specialist
+  Scenario: delete the Specialist
+    #delete the Specialist
 	When I wait for element with xpath "//td[contains(text(),'Robin Good')]" to be present
 	Then I click on element with xpath "//td[contains(text(),'Robin Good')]/ancestor::tr[1]//span[contains(text(),'delete')]"
 	And I click on element with xpath "//button[contains(text(),'Remove specialist')]"
