@@ -1,10 +1,10 @@
 # ZhannaE automated tests
 # Medical Center scenarios
-  
-  Feature: MediCenter Test scenarios user story 3
-    
-    
-    Scenario: Login as administrator test cases 3 B042026-67 Create specialist with valid first name,last name,
+
+@medicenter
+Feature: MediCenter Test scenarios Zhanna user story 3
+
+  Scenario: Login as administrator test cases 3 B042026-67 Create specialist with valid first name,last name,
       specialist type,and working hours
       Given I open url "https://medicenter-qa2.vercel.app/"
       When I wait for element with xpath "//h1[contains(text(),'Medical Center')]" to be present
