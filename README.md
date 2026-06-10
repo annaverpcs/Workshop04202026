@@ -1,4 +1,4 @@
-Initial project for selenium tests
+# Initial project for selenium tests
 
 **How to push your changes to GitHub**
 
