@@ -34,7 +34,7 @@ Feature:  MediCenter Test Scenarios
 
     # enter appt data into window
     When I wait for element with xpath '//*[@id="user_name"]' to be present
-    Then I type "First Last Name" into element with xpath '//*[@id="user_name"]'
+    Then I type "Glenn Raindrop" into element with xpath '//*[@id="user_name"]'
     And I type "Annual checkup" into element with xpath '//*[@id="note"]'
     And I wait for 2 sec
 
@@ -44,14 +44,30 @@ Feature:  MediCenter Test Scenarios
     And I wait for 2 sec
 
     # pick a date and time
-    And I type "07/01/2026" into element with xpath "//input[@id='date']"
+    And I type "06/17/2026" into element with xpath "//input[@id='date']"
     Then I wait for 1 sec
     Then I click on element with xpath "//button[contains(text(),'09:30 AM')]"
     And I wait for 2 sec
 
     # click Submit
-    Then I click on element with xpath "//button[@type='submit']"
+    When I click on element with xpath "//button[@type='submit']"
 
     # Confirm the window closed
+    Then element with xpath '//*[@id="radix-:r99:"]' should not be present
+    And I wait for 3 sec
 
     # Confirm the appt was created for the date selected
+    And element with text 'Glenn Raindrop' should be present
+
+    # Open Appt summary
+    When I click on element with text 'Glenn Raindrop'
+    And I wait for 3 sec
+
+    # Cancel appt
+    When I click on element with text 'Cancel appointment'
+    And I wait for 1 sec
+    Then element with xpath '//*[@id="radix-:r99:"]' should not be present
+    And element with text 'Glenn Raindrop' should not be present
+    And I wait for 5 sec
+
+
