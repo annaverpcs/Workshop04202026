@@ -2,7 +2,7 @@
   # Medical center
   #As Patient. Create new appointment, verify, and delete
 
-@medicenter @patient
+@medicenter @patient @appointment
 Feature: MediCenter Test Scenarios as Patient
 
   Background:
