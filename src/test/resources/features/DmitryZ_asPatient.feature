@@ -2,7 +2,7 @@
   # Medical center
   #As Patient. Create new appointment, verify, and delete
 
-@medicenter
+@medicenter @patient
 Feature: MediCenter Test Scenarios as Patient
 
   Background:
@@ -20,8 +20,7 @@ Feature: MediCenter Test Scenarios as Patient
 	And I wait for 1 sec
 
   Scenario:Create new appointment
-	#Create new appointment
-      #When I click on element with xpath "//button[@type='button']"
+	#Create new appointment#When I click on element with xpath "//button[@type='button']"
 	When I click on element with xpath "//button[contains(text(),'Make an appointment')]"
 	And I wait for element with xpath "//span[contains(text(), 'Make an appointment')]" to be present
 	Then I type "New post" into element with xpath "//textarea[@id ='note']"
