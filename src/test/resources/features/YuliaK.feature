@@ -36,18 +36,18 @@ Feature:  MediCenter Test Scenarios
     When I wait for element with xpath '//*[@id="user_name"]' to be present
     Then I type "First Last Name" into element with xpath '//*[@id="user_name"]'
     And I type "Annual checkup" into element with xpath '//*[@id="note"]'
-    And I wait for 3 sec
+    And I wait for 2 sec
 
     # pick a specialist from dropdown
     # @When("I select {string} from the {string} dropdown")
     When I select "Alexander N. Bakulev (Doctor)" from the "employee_id" dropdown
-    And I wait for 3 sec
+    And I wait for 2 sec
 
     # pick a date and time
     And I type "07/01/2026" into element with xpath "//input[@id='date']"
     Then I wait for 1 sec
     Then I click on element with xpath "//button[contains(text(),'09:30 AM')]"
-    And I wait for 3 sec
+    And I wait for 2 sec
 
     # click Submit
     Then I click on element with xpath "//button[@type='submit']"
