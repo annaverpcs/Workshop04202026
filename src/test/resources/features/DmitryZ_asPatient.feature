@@ -2,7 +2,7 @@
   # Medical center
   #As Patient. Create new appointment, verify, and delete
 
-@medicenter @patient
+@medicenter @patient @appointment
 Feature: MediCenter Test Scenarios as Patient
 
   Background:
@@ -25,8 +25,8 @@ Feature: MediCenter Test Scenarios as Patient
 	And I wait for element with xpath "//span[contains(text(), 'Make an appointment')]" to be present
 	Then I type "New post" into element with xpath "//textarea[@id ='note']"
 	And I wait for 1 sec
-	Then I click on element with xpath "//select[@name='employee_id']/..//option[@value='918739d6-3970-4ca3-a17d-a6c0578d8e30']"
-	And I type "06.05.2026" into element with xpath "//input[@id='date']"
+	Then I click on element with xpath "//select[@name='employee_id']/..//option[@value='d9c5e627-0f06-429d-a402-63ca781c5b96']"
+	And I type "06.20.2026" into element with xpath "//input[@id='date']"
 	And I wait for 3 sec
 	Then I click on element with xpath "//button[contains(text(), '08:00 AM')]"
 	Then I click on element with xpath "//button[@type='submit']"
@@ -39,7 +39,7 @@ Feature: MediCenter Test Scenarios as Patient
         #icon for close
 	And I wait for element with xpath "//p[contains(text(), 'New post')]/ancestor::article[1]//span[contains(text(), 'update')]" to be present
         #Doctor selected is correct
-	And element with xpath "//p[contains(text(), 'New post')]/ancestor::article[1]//p[contains(text(), 'Daniel Buche')]" should be present
+	And element with xpath "//p[contains(text(), 'New post')]/ancestor::article[1]//p[contains(text(), 'Buggy Smith')]" should be present
       # BUG - Not correct date.
         #Date and time
      # And element with xpath "//p[contains(text(), 'New post')]/ancestor::article[1]//h3[contains(text(), 'Friday 05 June 2026, 08:00')]" should be present

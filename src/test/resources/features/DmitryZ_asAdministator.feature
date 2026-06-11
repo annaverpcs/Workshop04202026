@@ -73,7 +73,7 @@ Feature: Medicenter test as Administrator
 	And I wait for 1 sec
 
 	Then "First Name" textfield value should be "Robin"
-	Then "last Name" textfield value should be "Good"
+	Then "Last Name" textfield value should be "Good"
 
 	And element with xpath "//button[@id='monday' and @aria-checked='true']" should be present
 	And element with xpath "//input[@id='working_hours.monday.from' and @value='08:00']" should be present
