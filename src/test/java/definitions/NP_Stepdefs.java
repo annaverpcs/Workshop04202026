@@ -140,6 +140,9 @@ public class NP_Stepdefs {
             case "Login":
                 getDriver().findElement(By.xpath(xPathLibrary_NP.sLogin_Button)).click();
                 break;
+            case "Logout":
+                getDriver().findElement(By.xpath(xPathLibrary_NP.sLogout_Button)).click();
+                break;
             case "Sign In":
                 getDriver().findElement(By.xpath(xPathLibrary_NP.sSignIn_Button)).click();
                 break;
