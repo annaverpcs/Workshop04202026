@@ -10,3 +10,4 @@ Feature: Smoke steps
     Then I wait for element with xpath "//div[@class='gsc-control-cse gsc-control-cse-en']" to be present
     And element with xpath "//div[@class='gsc-control-cse gsc-control-cse-en']" should contain text "Development"
     And I wait for 3 sec
+
