@@ -122,36 +122,36 @@ Feature: Nataliya - User story 6
     Then NP wait for 1 sec
     Then NP click on element with xpath "//button[@type='submit']"
     Then NP wait for 2 sec
-    Then NP wait for "//p[contains(normalize-space(.),'Doctor Overlap Base Appointment')]/ancestor::article/div[1]/div" text
+    Then NP wait for "//p[contains(text(),'Doctor Overlap Base Appointment')]/ancestor::article/div[1]/div" text
 
     # Logout first patient
     Then NP click on "Logout" button
+    Then NP wait for 2 sec
+    Then NP wait for "//h1[contains(text(),'Medical Center')]" text
+    Then NP wait for "//*[self::button or self::a][contains(normalize-space(.),'Login')]" text
 
     # Login as second patient
-    #Given NP opens Medical Center url "MediCenter v2 url"
-    #Then The NP page title is "Medicenter"
-    #And NP wait for "//h1[contains(text(),'Medical Center')]" text
-
-    #Then NP click on "Login" button
-    #Then NP wait for "//label[@for='email']" text
-    #And NP type "patient2@gmail.com" to "Email" text field
-    #And NP type "abc123" to "Password" text field
-    #Then NP click on "Sign In" button
-    #Then NP wait for 1 sec
+    Then NP click on "Login" button
+    Then NP wait for 2 sec
+    Then NP wait for "//label[@for='email']" text
+    And NP type "patient2@gmail.com" to "Email" text field
+    And NP type "abc123" to "Password" text field
+    Then NP click on "Sign In" button
+    Then NP wait for 1 sec
 
     # Try to book same doctor, same date, same time
-    #Then NP click on "Make an appointment" button
-    #Then NP wait for "//span[contains(text(),'Make an appointment')]" text
-    #And NP type "Doctor Overlap Duplicate Appointment" to "Purpose" purpose text field
-    #Then NP wait for 1 sec
-    #Then NP click on element with xpath "//select[@name='employee_id']/..//option[@value='31d37556-f131-49fe-b2ae-4843eb11ab0b']"
-    #Then NP wait for 1 sec
-    #And NP type "Current date" into element with xpath "//input[@id='date']"
-    #Then NP wait for 1 sec
-    #Then NP click on element with xpath "//button[contains(text(),'01:00 PM')]"
-    #Then NP wait for 1 sec
-    #Then NP click on element with xpath "//button[@type='submit']"
-    #Then NP wait for 2 sec
+    Then NP click on "Make an appointment" button
+    Then NP wait for "//span[contains(text(),'Make an appointment')]" text
+    And NP type "Doctor Overlap Duplicate Appointment" to "Purpose" purpose text field
+    Then NP wait for 1 sec
+    Then NP click on element with xpath "//select[@name='employee_id']/..//option[@value='31d37556-f131-49fe-b2ae-4843eb11ab0b']"
+    Then NP wait for 1 sec
+    And NP type "Current date" into element with xpath "//input[@id='date']"
+    Then NP wait for 1 sec
+    Then NP click on element with xpath "//button[contains(text(),'01:00 PM')]"
+    Then NP wait for 1 sec
+    Then NP click on element with xpath "//button[@type='submit']"
+    Then NP wait for 2 sec
 
     # Verify duplicate appointment was not created
     Then NP wait for "//p[contains(normalize-space(.),'Doctor Overlap Duplicate Appointment')]/ancestor::article/div[1]/div" text is invisible
