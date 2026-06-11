@@ -1,8 +1,6 @@
 @predefined
 Feature: Smoke steps
 
-  @predefined1
-
   Scenario: Search by www.gibiru.com
     Given I open url "https://gibiru.com/"
     Then I should see page title as "Gibiru – Protecting your privacy since 2009"
